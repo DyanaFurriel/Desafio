@@ -23,10 +23,12 @@ ul{
     list-style: none;
     display:flex;
     justify-content: space-evenly;
-
 }
 main{
 border: solid;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 .azul{
     background-image: url(./img/laranja\ azul\ recorte.png);
@@ -35,35 +37,54 @@ border: solid;
     height: 650px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     color:#fff;
-
-
 }
 h2{
     font-size: 80px;
-    
 }
-button
-{
+button{
     font-size: 60px;
     border: none;
+    width: 500px;
+    color: white;
+    background-color: rgba(0, 183, 255, 0.952);
 }
 .fotos{
-    border: solid;
     width: 100%;
 display: flex;
-flex-direction: column;
-justify-content: space-between;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-content: space-around;
 }
-div{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
-div img{
+figure{
     width: 23%;
-    
-    
+    overflow: hidden;
+}
+figure img{
+    width: 100%;
+}
+figure img:hover{
+    transform: scale(120%);    
+}
+@media (max-width: 600px) {
+ nav{
+     display: none;
+ }   
+ .menu
+ {
+     display: initial;
+ }
+ header{
+     justify-content: space-around;
+ }
+button{
+    width: 80%;
+}
+.fotos{
+    flex-direction: column;
+}
+.fotos figure {
+    width: 80%;
+}
 }
